@@ -34,12 +34,17 @@ public class Spawn : MonoBehaviour
         if (sharp.bounds.Contains(mousePos) == true && Mouse.current.leftButton.wasPressedThisFrame == true)
         {
             roll = Random.Range(0, 5);
-            Destroy(knives[0]);
+           
         }
+       
         if (roll== 3)
         {
             Destroy(pirate);
             pop = true;
+        }
+        else
+        {
+            Destroy(knives[0]);
         }
         
         

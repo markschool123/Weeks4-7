@@ -202,10 +202,10 @@ MonoBehaviour:
   m_FillRect: {fileID: 1249239087}
   m_HandleRect: {fileID: 1454796660}
   m_Direction: 0
-  m_MinValue: 0
-  m_MaxValue: 1
+  m_MinValue: 1
+  m_MaxValue: 6
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -231,6 +231,7 @@ GameObject:
   m_Component:
   - component: {fileID: 131782630}
   - component: {fileID: 131782629}
+  - component: {fileID: 131782631}
   m_Layer: 0
   m_Name: Square
   m_TagString: Untagged
@@ -308,6 +309,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &131782631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 131782628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 692c63625f9be534e80dd2161d8e7bcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dice: {fileID: 131782628}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -578,7 +592,6 @@ GameObject:
   - component: {fileID: 801269601}
   - component: {fileID: 801269600}
   - component: {fileID: 801269603}
-  - component: {fileID: 801269604}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -662,7 +675,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 801269604}
+      - m_Target: {fileID: 131782631}
         m_TargetAssemblyTypeName: Roll, Assembly-CSharp
         m_MethodName: diceFlip
         m_Mode: 1
@@ -727,19 +740,7 @@ MonoBehaviour:
   roll: 0
   die: {fileID: 0}
   rollNum: {fileID: 1064833043}
---- !u!114 &801269604
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 801269598}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 692c63625f9be534e80dd2161d8e7bcd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dice: {fileID: 131782628}
+  slider: {fileID: 30701741}
 --- !u!1 &829613297
 GameObject:
   m_ObjectHideFlags: 0
@@ -1627,6 +1628,7 @@ MonoBehaviour:
   tankMove: {fileID: 0}
   spawnedTank: {fileID: 0}
   tanks: []
+  slider: {fileID: 30701741}
 --- !u!4 &2050327163
 Transform:
   m_ObjectHideFlags: 0

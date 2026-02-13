@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,6 +14,8 @@ public class Spawner : MonoBehaviour
     bool timerOn;
     public Slider slider;
     private float lastValue;
+    public TextMeshProUGUI death;
+    float destroyed;
     void Start()
     {
         
@@ -53,6 +56,8 @@ public class Spawner : MonoBehaviour
         {
             Destroy(tanks[0]);
             tanks.RemoveAt(0);
+            destroyed++;
+            death.text = destroyed.ToString();
 
         }
 

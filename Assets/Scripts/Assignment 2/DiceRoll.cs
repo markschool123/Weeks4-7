@@ -15,7 +15,14 @@ public class DiceRoll : MonoBehaviour
     void Update()
     {    
 
-        roll = Random.Range(0, 5);
+     
 
+    }
+
+    public void diceThrow()
+    {
+
+        roll = Random.Range(1, 7);
+        
     }
 }

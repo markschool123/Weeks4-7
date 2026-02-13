@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Spawner : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class Spawner : MonoBehaviour
     public GameObject spawnedTank;
     public List<GameObject> tanks;
     bool timerOn;
+    public Slider slider;
+    private float lastValue;
     void Start()
     {
         
@@ -45,6 +48,15 @@ public class Spawner : MonoBehaviour
                 tanks.Add(spawnedTank);
             }
         }
+
+        if (slider.value == 3 && lastValue !=3 &&tanks.Count >0)
+        {
+            Destroy(tanks[0]);
+            tanks.RemoveAt(0);
+
+        }
+
+        lastValue = slider.value;
         
     }
 }

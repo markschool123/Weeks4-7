@@ -35,7 +35,7 @@ public class Spawner : MonoBehaviour
 
         
 
-        if (timer > 1)
+        if (timer > 5)
         {
             timer = 0;
             if (tanks.Count < 5)
